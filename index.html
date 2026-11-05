@@ -1,0 +1,236 @@
+<link rel="stylesheet" href="style.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vault | Password Manager</title>
+
+    <!-- Connect CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="vault-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h1>🔐 Vault</h1>
+            <p>Password Manager</p>
+
+            <nav>
+                <ul>
+                    <li><a href="#dashboard" class="active">▦ Dashboard</a></li>
+                    <li><a href="#passwords">🔑 All Passwords</a></li>
+                    <li><a href="#favourites">⭐ Favourites</a></li>
+                    <li><a href="#secure-notes">📝 Secure Notes</a></li>
+                    <li><a href="#settings">⚙ Settings</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>● Demo Vault</p>
+                <p>Version 1.0.0</p>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header>
+                <h2>My Password Vault</h2>
+                <p>Welcome back. Your digital security, organised.</p>
+            </header>
+
+
+            <!-- DASHBOARD -->
+            <section id="dashboard">
+
+                <h3>Overview</h3>
+
+                <div class="statistics">
+
+                    <div class="stat-card">
+                        <h4>Total Passwords</h4>
+                        <p id="totalPasswords">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h4>Favourites</h4>
+                        <p id="totalFavourites">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h4>Security Alerts</h4>
+                        <p id="securityAlerts">1</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SEARCH -->
+            <section class="search-section">
+
+                <h3>Find a Password</h3>
+
+                <input
+                    type="search"
+                    id="passwordSearch"
+                    placeholder="Search your passwords..."
+                >
+
+            </section>
+
+
+            <!-- PASSWORD COLLECTION -->
+            <section id="passwords">
+
+                <div class="section-header">
+
+                    <h3>My Saved Passwords</h3>
+
+                    <button class="primary-button" id="addPasswordBtn">
+                        + Add Password
+                    </button>
+
+                </div>
+
+                <!-- JavaScript creates password cards here -->
+                <div class="password-grid" id="passwordGrid">
+
+                </div>
+
+            </section>
+
+
+            <!-- ADD / EDIT PASSWORD FORM -->
+            <section id="passwordFormSection" hidden>
+
+                <h3 id="formTitle">Add New Password</h3>
+
+                <form id="passwordForm">
+
+                    <input type="hidden" id="passwordId">
+
+                    <div class="form-group">
+                        <label for="siteName">Website / Service</label>
+                        <input
+                            type="text"
+                            id="siteName"
+                            placeholder="e.g. Netflix"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="siteUrl">Website URL</label>
+                        <input
+                            type="text"
+                            id="siteUrl"
+                            placeholder="e.g. netflix.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username / Email</label>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter username"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter password"
+                            required
+                        >
+                    </div>
+
+                    <button
+                        type="button"
+                        id="generatePassword"
+                        class="secondary-button">
+                        Generate Password
+                    </button>
+
+                    <div class="form-actions">
+
+                        <button type="submit" class="primary-button">
+                            Save Password
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelForm"
+                            class="secondary-button">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- SECURE NOTES -->
+            <section id="secure-notes">
+
+                <h3>Secure Notes</h3>
+
+                <div class="simple-card">
+                    <p>Store important information securely.</p>
+                    <button class="primary-button" type="button">
+                        + Create Note
+                    </button>
+                </div>
+
+            </section>
+
+
+            <!-- SETTINGS -->
+            <section id="settings">
+
+                <h3>Vault Settings</h3>
+
+                <div class="simple-card">
+                    <p>Manage your account and security preferences.</p>
+                    <button class="secondary-button" type="button">
+                        Manage Settings
+                    </button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Vault Password Manager | Demonstration Project</p>
+        <p>Demo only – do not enter real passwords.</p>
+    </footer>
+
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
